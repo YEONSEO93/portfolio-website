@@ -742,7 +742,7 @@ button:focus {
 .arrow-up {
   background-color: var(--color-accent-variant);
   position: fixed;
-  bottom: 3rem;
+  bottom: 5rem;
   right: 3rem;
   font-size: 3rem;
   width: 4.5rem;
@@ -751,6 +751,9 @@ button:focus {
   text-align: center;
   box-shadow: 5px 5px 0px 0px var(--color-accent);
   transition: opacity 300ms ease-in;
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
 }
 
 
