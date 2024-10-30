@@ -15,7 +15,7 @@
     rgba(5, 10, 19, 1) 100%
   );
   --home-bg-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='1' y2='0'%3E%3Cstop offset='0' stop-color='%230FF'/%3E%3Cstop offset='1' stop-color='%23CF6'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23F00'/%3E%3Cstop offset='1' stop-color='%23FC0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23FFF' fill-opacity='0' stroke-miterlimit='10'%3E%3Cg stroke='url(%23a)' stroke-width='2'%3E%3Cpath transform='translate(0 0)' d='M1409 581 1450.35 511 1490 581z'/%3E%3Ccircle stroke-width='4' transform='rotate(0 800 450)' cx='500' cy='100' r='40'/%3E%3Cpath transform='translate(0 0)' d='M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z'/%3E%3C/g%3E%3Cg stroke='url(%23b)' stroke-width='4'%3E%3Cpath transform='translate(0 0)' d='M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z'/%3E%3Crect stroke-width='8' transform='rotate(0 1089 759)' x='1039' y='709' width='100' height='100'/%3E%3Cpath transform='rotate(0 1400 132)' d='M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  --home-avatar-svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" fill="%23F64D5C"><path d="M240 240A240 240 0 0 0 0 480h120a120 120 0 0 1 240 0h120a240 240 0 0 0-240-240ZM240 0A240 240 0 0 0 0 240h120a120 120 0 0 1 240 0h120A240 240 0 0 0 240 0Z"></path></svg>');
+  --home-avatar-svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" fill="%23FFF5F2"><path d="M240 120A120 120 0 0 1 120 0H0a240 240 0 0 0 240 240A240 240 0 0 0 0 480h120c0-66.3 53.7-120 120-120a120 120 0 1 0 0-240Z"></path></svg>');
 
 
 
@@ -247,8 +247,8 @@ button:focus {
   background: var(--home-avatar-svg);
   position: relative;
   bottom: -70px;
-  width: 600px;
-  height: 600px;
+  width: 420px;
+  height: 500px;
   object-fit: cover;
   transform: scaleX(-1) rotate(-5deg);
 }
@@ -651,7 +651,7 @@ button:focus {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   /* Adjusted for 3 images per row */
-  gap: 1rem;
+  gap: 3rem;
   transition: all 250ms ease-out;
 }
 
@@ -711,8 +711,8 @@ button:focus {
 
 .project__img {
   width: 100%;
+    height: 250px;
   border-radius: 8px;
-  /* Ensure images have rounded corners */
 }
 
 .project:hover .project__metadata {
@@ -755,6 +755,125 @@ button:focus {
   opacity: 1;
   visibility: visible;
 }
+
+
+/* Education & Certifications */
+#education {
+  padding: 4rem 2rem;
+  color: var(--color-text);
+  text-align: center;
+
+}
+
+#education .title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#education .description {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.education-certification-container {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 120px;
+}
+
+.education,
+.certifications {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 45%;
+}
+
+/* Item Styling */
+.education__item,
+.certification__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--color-primary);
+  padding: 1.5rem 2rem;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education__item:hover,
+.certification__item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.icon-background {
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-pink);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.icon-background:hover {
+  transform: scale(1.1);
+  background-color: var(--color-pink);
+}
+
+.education__icon,
+.certification__icon {
+  font-size: 1.8rem;
+  color: var(--color-white);
+}
+
+.education__degree,
+.certification__name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+.certification__date {
+  font-size: 1rem;
+  color: var(--color-black);
+  text-align: left;
+  margin-left: 8px;
+  width: 100%;
+  font-style: italic;
+}
+
+.education__institution,
+.certification__date {
+  font-size: 1rem;
+  color: var(--color-black);
+}
+
+.education__years {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+  .education-certification-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .education,
+  .certifications {
+    width: 100%;
+        align-items: center;
+  }
+}
+
 
 
 
@@ -1000,9 +1119,13 @@ button:focus {
     width: 100%;
   }
 
-  .projects {
-    grid-template-columns: repeat(2, 1fr);
-  }
+ .projects {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 1.5rem;
+   /* Increased gap for more spacing between projects */
+   transition: all 250ms ease-out;
+ }
 
 
   .arrow-up {
@@ -1017,7 +1140,7 @@ button:focus {
   width: 36px;
   /* Adjust size for mobile */
   height: 36px;
-  background-color: #e0e8ff;
+  background-color: var(--color-pink);
   /* Light background for a softer look */
   border-radius: 50%;
   /* Circular background */
@@ -1034,14 +1157,14 @@ button:focus {
 .icon-background:hover {
   transform: scale(1.1);
   /* Slight grow on hover */
-  background-color: #d0d8f8;
+  background-color: var(--color-pink);
   /* Darker background on hover */
 }
 
 .icon-background i {
   font-size: 18px;
   /* Center the icon */
-  color: #5078ff;
+  color: var(--color-white);
   /* Soft, consistent color for the icons */
 }
 }
