@@ -1178,3 +1178,9 @@ button:focus {
     /* Ensures each project takes full width of the container */
   }
 }
+
+@media (max-width: 480px) {
+  .icon-background {
+    display: none;
+  }
+}
