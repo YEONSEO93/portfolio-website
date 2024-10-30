@@ -1177,10 +1177,23 @@ button:focus {
     width: 100%;
     /* Ensures each project takes full width of the container */
   }
+    .home__title {
+      font-size: 2rem;
+      /* Adjust as needed to fit the screen */
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+         .education__item,
+         .certification__item {
+           text-align: center;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+           gap: 0.5rem;
+         }
+                     .icon-background {
+                       display: none;
+                     }
 }
 
-@media (max-width: 480px) {
-  .icon-background {
-    display: none;
-  }
-}
