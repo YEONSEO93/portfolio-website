@@ -1197,3 +1197,59 @@ button:focus {
                      }
 }
 
+@media (max-width: 768px) {
+  .home__container {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+    /* Additional padding for spacing */
+  }
+
+  .home__avatar {
+    width: 150px;
+    /* Increase the size for better visibility */
+    height: 150px;
+    margin-bottom: 1rem;
+    transform: none;
+    /* Reset any transformations */
+    border-radius: 50%;
+    /* Center the avatar and make it more prominent */
+  }
+
+  .home__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    /* Adjust size for mobile display */
+  }
+
+  .home__description {
+    font-size: 1rem;
+    margin: 0 1rem 2rem;
+    /* Increase bottom margin for more spacing */
+  }
+
+  .home__contact {
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 1.5rem;
+    /* Slightly larger for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .home__avatar {
+    width: 120px;
+    height: 120px;
+    /* Slightly smaller for very small screens */
+  }
+
+  .home__title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .home__description {
+    font-size: 0.9rem;
+    margin: 0 1rem 1.5rem;
+  }
+}
