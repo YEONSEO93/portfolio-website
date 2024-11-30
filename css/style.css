@@ -753,6 +753,73 @@ button:focus {
   visibility: visible;
 }
 
+.highlight-click {
+  color: var(--color-accent);
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: capitalize;
+  text-decoration: none;
+  position: relative;
+  animation: wiggle 1.5s infinite;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.highlight-click:hover {
+  color: var(--color-accent-variant);
+  transform: scale(1.2) rotate(-5deg);
+  text-shadow: 0 0 10px #ffa7d1, 0 0 20px #ff69b4;
+}
+
+.highlight-click::before,
+.highlight-click::after {
+  content: "✨";
+  position: absolute;
+  animation: sparkle 1.5s infinite;
+  font-size: 14px;
+}
+
+.highlight-click::before {
+  top: -10px;
+  left: -15px;
+}
+
+.highlight-click::after {
+  bottom: -10px;
+  right: -15px;
+}
+
+/* Wiggle Animation */
+@keyframes wiggle {
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(3deg);
+  }
+
+  75% {
+    transform: rotate(-3deg);
+  }
+}
+
+/* Sparkle Animation */
+@keyframes sparkle {
+
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
 
 /* Education & Certifications */
 #education {
